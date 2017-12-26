@@ -1,0 +1,27 @@
+import java.util.Date;
+
+public abstract class Transaction {
+  protected Customer customer;
+  protected Movie movie;
+  protected Date date;
+  
+  public Transaction(Customer customer, Movie movie, Date date) {
+    this.customer = customer;
+    this.movie = movie;
+    this.date = date;
+  }
+  
+  public Customer getCustomer() {
+    return customer;
+  }
+  
+  public Movie getMovie() {
+    return movie;
+  }
+  
+  public Date getDate() {
+    return date;
+  }
+  
+  public abstract String getMovieEventString();
+}

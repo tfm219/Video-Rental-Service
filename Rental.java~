@@ -1,0 +1,31 @@
+import java.util.Date;
+public class Rental extends Transaction {
+  private int copiesRemaining;
+  
+  public Rental(Customer customer, Movie movie, Date date) {
+    super(customer, movie, date);
+  }
+  
+  public void setCopiesRemaining(int copiesRemaining) {
+    this.copiesRemaining = copiesRemaining;
+  }
+  
+  public String getMovieEventString() {
+    return "bitch";
+  }
+  
+  public boolean equals(Object o) {
+    if (o instanceof Rental) {
+      Rental other = (Rental)o;
+      if (customer.equals(other.customer) && movie.equals(other.movie) && date.equals(other.date)) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+}

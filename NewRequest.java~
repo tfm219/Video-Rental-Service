@@ -1,0 +1,29 @@
+import java.util.Date;
+import java.text.SimpleDateFormat;
+
+public class NewRequest extends Transaction {
+  
+   public NewRequest(Customer customer, Movie movie, Date date) {
+    super(customer, movie, date);
+  }
+  
+  public String getMovieEventString() {
+    return "Fags";
+  }
+  
+  public boolean equals(Object o) {
+    if (o instanceof NewRequest) {
+      NewRequest other = (NewRequest) o;
+      if (customer.equals(other.customer) && movie.equals(other.movie) && date.equals(other.date)) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    else {
+      return false;
+    }
+  }
+}
+  

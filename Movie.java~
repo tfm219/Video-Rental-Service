@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Movie {
+  private int id;
+  private String title;
+  private int numCopies;
+  private int numAvailable;
+  private MyQueue<Customer> waitList;
+  private MyLinkedList<Rental> currentRentals;
+  private ArrayList<Transaction> rentalHistory;
+  
+  public Movie(int id, String title, int numCopies) {
+    this.id = id;
+    this.title = title;
+    this.numCopies = numCopies;
+    numAvailable = numCopies;
+  }
+    
+}
